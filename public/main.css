@@ -1,0 +1,7 @@
+html,
+body {
+    height: 100vh;
+}
+#root {
+    min-height: 100%;
+}
