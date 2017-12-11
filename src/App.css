@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+body{
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLZp-0Zvi5Rg98VKc1TUvMi2QF0DVFjnnK9rYAbBfOCTjOwx8d-A") repeat;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

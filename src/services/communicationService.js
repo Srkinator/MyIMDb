@@ -1,11 +1,7 @@
-import React, { Component } from 'react';
 import axios from 'axios';
+import { Component } from 'react';
 
 class CommunicationService extends Component {
-    constructor(props) {
-        super(props);
-        
-    }
     
     getShows(notifyGetRequest) {
         axios.get("http://api.tvmaze.com/shows")
@@ -14,8 +10,7 @@ class CommunicationService extends Component {
             })
             .catch(error => {
                 console.log(error);
-                let errorMsg = error.response ? error.response.code : "Server unavailable";
-                // handleError(errorMsg);
+                // let errorMsg = error.response ? error.response.code : "Server unavailable";
             });
     }
 
@@ -26,8 +21,7 @@ class CommunicationService extends Component {
             })
             .catch(error => {
                 console.log(error);
-                let errorMsg = error.response ? error.response.code : "Server unavailable";
-                // handleError(errorMsg);
+                // let errorMsg = error.response ? error.response.code : "Server unavailable";
             });
     }
 
@@ -38,8 +32,7 @@ class CommunicationService extends Component {
             })
             .catch(error => {
                 console.log(error);
-                let errorMsg = error.response ? error.response.code : "Server unavailable";
-                // handleError(errorMsg);
+                // let errorMsg = error.response ? error.response.code : "Server unavailable";
             });
     }
 
@@ -51,8 +44,7 @@ class CommunicationService extends Component {
             })
             .catch(error => {
                 console.log(error);
-                let errorMsg = error.response ? error.response.code : "Server unavailable";
-                // handleError(errorMsg);
+                // let errorMsg = error.response ? error.response.code : "Server unavailable";
             });
     }
     

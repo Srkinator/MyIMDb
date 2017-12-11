@@ -1,7 +1,14 @@
-html,
-body {
+
+body, html{
     height: 100vh;
 }
 #root {
     min-height: 100%;
+}
+
+.search-item:hover{
+    background-color: rgb(187, 187, 187)
+}
+#accordion{
+    padding: 0;
 }

@@ -8,19 +8,22 @@ class ShowList extends Component {
         this.state = {
             listOfShows: []
         };
-        
+
     }
 
     render() {
         return (
-              <div className="container">
+            <div className="container">
+                <div className="row">
+                    <h1 style={{paddingBottom:"50px", textAlign:"center",width:"100%", color:"#abc3ea"}}>FEATURED SHOWS</h1>
+                </div>
                 <div className="row">
                     {this.props.shows.map((show) => {
                         return (
-                            <div className="col-lg-3 col-md-4 col-sm-6" key = {show.id}>
-                                <img src={show.image} style={{width:"100%"}}/>
-                                <Link to ={`/shows/${show.id}`}>
-                                <h3>{show.name}</h3>
+                            <div className="col-lg-3 col-md-4 col-sm-6" key={show.id} >
+                                <Link to={`/shows/${show.id}`}>
+                                    <img alt="a" src={show.image} style={{ width: "100%", height: "308px" }} />
+                                    <h3>{show.name}</h3>
                                 </Link>
                             </div>
                         )
@@ -28,9 +31,9 @@ class ShowList extends Component {
                     )
                     }
                 </div>
-            </div>       
+            </div>
         );
     }
 }
 
-export default ShowList ;
+export default ShowList;

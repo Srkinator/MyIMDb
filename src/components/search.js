@@ -8,10 +8,9 @@ class Search extends Component {
             searchString: ""
         }
 
-        this.searchValue = this.searchValue.bind(this);
     }
 
-    searchValue(event) {
+    searchValue =(event) =>{
         this.props.dispatch(event.target.value);
     }
 
@@ -19,7 +18,6 @@ class Search extends Component {
         return (
             <div>
                 <input className="form-control mr-sm-2" type="text" placeholder="Search" onChange={this.searchValue}/>
-                <input onClick={this.props.dispatchSearch} type="button" value="Search" className="btn btn-outline-success my-2 my-sm-0" type="submit" />
             </div>
         );
     }
