@@ -54,7 +54,7 @@ class Main extends Component {
                 <div>
                     <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
                         <Link to="/shows">
-                            <a className="navbar-brand">MyIMDb</a>
+                            <p style={{color:"#abc3ea"}} className="navbar-brand">MyIMDb</p>
                         </Link>
                         <div style={{position:"absolute", right:10, top: 10}}>
                             <Search dispatch={this.catchSearch} />

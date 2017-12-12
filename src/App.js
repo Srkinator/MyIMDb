@@ -16,7 +16,7 @@ class App extends Component {
           <Route exact path="/shows" component={Main} />
           <Route path="/shows/:id" component={SingleShowInfo} />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

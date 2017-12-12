@@ -20,9 +20,9 @@ class ShowList extends Component {
                 <div className="row">
                     {this.props.shows.map((show) => {
                         return (
-                            <div className="col-lg-3 col-md-4 col-sm-6" key={show.id} >
+                            <div style={{position:"relative"}} className="col-lg-3 col-md-4 col-sm-6 zooming" key={show.id} >
                                 <Link to={`/shows/${show.id}`}>
-                                    <img alt="a" src={show.image} style={{ width: "100%", height: "308px" }} />
+                                    <img alt="a" src={show.image} style={{ width: "100%", height: "308px", marginBottom:"20px"}} />
                                     <h3>{show.name}</h3>
                                 </Link>
                             </div>

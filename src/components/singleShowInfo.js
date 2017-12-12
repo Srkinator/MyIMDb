@@ -26,11 +26,9 @@ class SingleShowInfo extends Component {
         this.loadData(nextProps.match.params.id);
     }
 
-    loadData = (newId) => {
-        let id = this.props.match.params.id || newId;
+    loadData = (id = this.props.match.params.id) => {
 
         this.communicationService.getSingleShow((response) => {
-            console.log(response);
             this.setState({
                 info: response,
                 imdb: response.externals.imdb,
@@ -53,14 +51,13 @@ class SingleShowInfo extends Component {
         if (!this.state.info) {
             return <p>Loading....</p>
         }
-        console.log(this.state.info);
         return (
 
             <div className="container">
                 <div>
                     <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
                         <Link to="/shows">
-                            <a className="navbar-brand">MyIMDb</a>
+                            <p className="navbar-brand">MyIMDb</p>
                         </Link>
                         <div style={{ position: "absolute", right: 10, top: 10 }}>
                             <Search dispatch={this.catchSearch} />
@@ -74,8 +71,8 @@ class SingleShowInfo extends Component {
                         ))}
                     </div>
                 </div>
-                <h2 style={{ textAlign: "center" }}>{this.state.info.name}</h2>
-                <h5 style={{ textAlign: "center", marginBottom: "50px" }}>{this.state.info.genres[0]}, {this.state.info.genres[1]}, {this.state.info.genres[2]} </h5>
+                <h2 style={{ textAlign: "center", marginBottom: "30px" }}>{this.state.info.name}</h2>
+                <h5 style={{ textAlign: "center", marginBottom: "50px"}}>{this.state.info.genres[0]}, {this.state.info.genres[1]}, {this.state.info.genres[2]} </h5>
                 <div className="row">
                     <div style={{ padding: 0 }} className="col-lg-6 col-sm-12">
                         <img alt="a" className="mx-auto" src={this.state.info.image.original} style={{ width: "100%" }} />
@@ -91,13 +88,12 @@ class SingleShowInfo extends Component {
                             <p>Runtime - {this.state.info.runtime} minutes </p>
                             <p>Status - {this.state.info.status}</p>
                             <a target="_blank" href={this.state.info.officialSite}>Official Site</a>
-
                         </div>
                     </div>
                 </div>
                 <div className="row" style={{ backgroundColor: "blue" }}>
                     <div id="accordion" className="col-12" role="tablist">
-                        <div className="card">
+                        <div className="card mycollapse">
                             <div className="card-header" role="tab" id="headingOne">
                                 <h5 className="mb-0">
                                     <a style={{fontSize:"1.5em"}} data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Click to Preview Cast</a>
@@ -108,7 +104,6 @@ class SingleShowInfo extends Component {
                                     <div className="row">
                                         <div className="list-group" style={{ padding: 0 }}>
                                             {this.state.info._embedded.cast.map((actor) => {
-                                                console.log(actor);
                                                 let personImg = actor.person.image;
                                                 let characterImg = actor.character.image;
 
