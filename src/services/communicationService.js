@@ -4,7 +4,7 @@ import { Component } from 'react';
 class CommunicationService extends Component {
     
     getShows(notifyGetRequest) {
-        axios.get("http://api.tvmaze.com/shows")
+        axios.get("https://api.tvmaze.com/shows")
             .then(response => {
                 notifyGetRequest(response.data);
             })
@@ -15,7 +15,7 @@ class CommunicationService extends Component {
     }
 
     getSingleShow(notifyGetRequest, id) {
-        axios.get(`http://api.tvmaze.com/shows/${id}?embed=cast`)
+        axios.get(`https://api.tvmaze.com/shows/${id}?embed=cast`)
             .then(response => {
                 notifyGetRequest(response.data);
             })
@@ -26,7 +26,7 @@ class CommunicationService extends Component {
     }
 
     searchRequest(notifyGetRequest, search) {
-        axios.get(`http://api.tvmaze.com/search/shows?q=${search}`)
+        axios.get(`https://api.tvmaze.com/search/shows?q=${search}`)
             .then(response => {
                 notifyGetRequest(response);
             })
@@ -38,7 +38,7 @@ class CommunicationService extends Component {
 
 
     getSeasons(notifyGetRequest, id) {
-        axios.get(`http://api.tvmaze.com/shows/${id}/seasons`)
+        axios.get(`https://api.tvmaze.com/shows/${id}/seasons`)
             .then(response => {
                 notifyGetRequest(response.data);
             })
