@@ -96,7 +96,7 @@ class SingleShowInfo extends Component {
                         <div className="card mycollapse">
                             <div className="card-header" role="tab" id="headingOne">
                                 <h5 className="mb-0">
-                                    <a style={{ fontSize: "1em" }} data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Click to Preview Cast</a>
+                                    <a style={{ fontSize: "1em" }} data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Click to preview Actors and their Roles</a>
                                 </h5>
                             </div>
                             <div id="collapseOne" className="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
