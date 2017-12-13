@@ -72,7 +72,7 @@ class SingleShowInfo extends Component {
                     </div>
                 </div>
                 <h2 style={{ textAlign: "center", marginBottom: "30px" }}>{this.state.info.name}</h2>
-                <h5 style={{ textAlign: "center", marginBottom: "50px"}}>{this.state.info.genres[0]}, {this.state.info.genres[1]}, {this.state.info.genres[2]} </h5>
+                <h5 style={{ textAlign: "center", marginBottom: "50px" }}>{this.state.info.genres[0]}, {this.state.info.genres[1]}, {this.state.info.genres[2]} </h5>
                 <div className="row">
                     <div style={{ padding: 0 }} className="col-lg-6 col-sm-12">
                         <img alt="a" className="mx-auto" src={this.state.info.image.original} style={{ width: "100%" }} />
@@ -80,7 +80,7 @@ class SingleShowInfo extends Component {
                     <div className="col-lg-6 col-sm-12">
                         {<p style={{ textAlign: "center", paddingBottom: "50px" }} id="collapseExample"><h5>Summary</h5><br></br>{this.state.info.summary ? this.state.info.summary.replace(/<\/?[^>]+(>|$)/g, "") : ""}</p>}
                         <div style={{ textAlign: "center" }}>
-                            <h5 style={{paddingBottom:"30px"}}>Basic Info</h5>
+                            <h5 style={{ paddingBottom: "30px" }}>Basic Info</h5>
                             <a target="_blank" href={`http://www.imdb.com/title/${this.state.imdb}`}><p style={{ textAlign: "center" }}>IMDB Rating - {this.state.info.rating.average}</p> </a>
                             <p>Language - {this.state.info.language}</p>
                             <p>Show Origin - {this.state.info.network.country.name}</p>
@@ -96,7 +96,7 @@ class SingleShowInfo extends Component {
                         <div className="card mycollapse">
                             <div className="card-header" role="tab" id="headingOne">
                                 <h5 className="mb-0">
-                                    <a style={{fontSize:"1.5em"}} data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Click to Preview Cast</a>
+                                    <a style={{ fontSize: "1em" }} data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Click to Preview Cast</a>
                                 </h5>
                             </div>
                             <div id="collapseOne" className="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
