@@ -59,7 +59,7 @@ class SingleShowInfo extends Component {
                         <Link to="/shows">
                             <p className="navbar-brand">MyIMDb</p>
                         </Link>
-                        <div style={{ position: "absolute", right: 10, top: 10 }}>
+                        <div style={{ position: "absolute", right: 10, top: 10, width:"50%" }}>
                             <Search dispatch={this.catchSearch} />
                         </div>
                     </nav>
